@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts SYSTEM "http://struts.apache.org/dtds/struts-2.5.dtd" >
+<struts>
+		
+		<!-- class="com.qzdatasoft.javaweb.StudentManagement"
+					method="addStu" -->
+					
+			<package  name="StudentInfo"  extends="struts-default" >
+			
+					<!-- 增加学生  -->
+					<action  name="Add" class="StudentManagement"
+					method="addStu" >
+						<result  name="success">/AddedStu.jsp</result>
+						
+					</action>
+					
+					<!-- 查看学生信息  -->
+					<action  name="Query">
+					<result>/ShowInfo.jsp</result>
+					</action>
+					
+					
+					<!-- 删除学生  -->
+					<action  name="Del"  class="StudentManagement"
+					method="DelStu">
+						<result  name="success">/DelSuccess.jsp</result>
+						<result  name="failed">/DelFailed.jsp</result>
+					</action>
+							
+			</package>
+</struts>
